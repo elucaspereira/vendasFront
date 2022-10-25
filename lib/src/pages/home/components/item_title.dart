@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendas/src/models/item_model.dart';
+import 'package:vendas/src/config/app_data.dart';
 
 class ItemTitle extends StatelessWidget {
   final ItemModel item;
