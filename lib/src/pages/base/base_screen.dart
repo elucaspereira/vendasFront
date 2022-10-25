@@ -25,9 +25,11 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
            const HomeTab(),// tela home
+
           Container(color: Colors.yellow),// tela carrinho
           Container(color: Colors.blue),// tela pedidos
           Container(color: Colors.purpleAccent), // tela perfil
+          
         ],
       ),
 

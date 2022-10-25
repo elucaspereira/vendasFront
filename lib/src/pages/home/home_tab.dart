@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:vendas/src/config/custom_colors.dart';
+import 'package:vendas/src/pages/home/components/item_title.dart';
 import 'components/category_tile.dart';
 import 'package:vendas/src/config/app_data.dart' as app_data;
 
@@ -138,9 +139,10 @@ class _HomeTabState extends State<HomeTab> {
               ),
               itemCount: app_data.items.length,
               itemBuilder: (_,index) {
-                return Container(
-                  color: Colors.red,
+                return  ItemTitle(
+                  item: app_data.items[index],
                 );
+                
               },
             ),
           ),
