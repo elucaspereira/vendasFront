@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendas/src/config/custom_colors.dart';
 import 'package:vendas/src/models/item_model.dart';
 import 'package:vendas/src/config/app_data.dart';
 
@@ -18,17 +19,45 @@ class ItemTitle extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Column(
-        children: [
-          // Imagem
-          Image.asset(item.imgUrl),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Imagem
+            Expanded(
+              child: Image.asset(item.imgUrl),
+            ),
 
-          // Nome
-          Text(item.itemName),
+            // Nome
+            Text(
+              item.itemName,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
 
-
-          // Preço - Unidade de Medida
-        ],
+            // Preço - Unidade de Medida
+            Row(
+              children: [
+                Text(
+                  item.price.toString(),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: CustomColors.customSwatchColor,
+                    ),
+                ),
+                Text('/${item.unit}', style: TextStyle(
+                  color: Colors.grey.shade500,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ), )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
