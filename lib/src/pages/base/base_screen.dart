@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+import 'package:vendas/src/pages/cart/cart_tab.dart';
 import '../home/home_tab.dart';
 
 
@@ -26,7 +26,7 @@ class _BaseScreenState extends State<BaseScreen> {
         children: [
            const HomeTab(),// tela home
 
-          Container(color: Colors.yellow),// tela carrinho
+          CartTab(),
           Container(color: Colors.blue),// tela pedidos
           Container(color: Colors.purpleAccent), // tela perfil
           

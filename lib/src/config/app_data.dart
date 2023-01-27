@@ -1,3 +1,4 @@
+import 'package:vendas/src/models/cart_item_model.dart';
 import 'package:vendas/src/models/item_model.dart';
 
 ItemModel smartphone = ItemModel(
@@ -10,7 +11,7 @@ ItemModel smartphone = ItemModel(
 ItemModel smartTv = ItemModel(
   description: 'a melhor Smart Tv de todas',
   itemName: 'Xiaomi Mi tv 4s',
-  imgUrl: "assets/eletronicos/tv.png" ,
+  imgUrl: "assets/eletronicos/tv.png",
   price: 5850.00,
   unit: 'UN',
 );
@@ -22,16 +23,14 @@ ItemModel geladeira = ItemModel(
   unit: 'UN',
 );
 ItemModel escrivaninha = ItemModel(
-  description: 'Escrivaninha multiuso',
-  itemName: 'Escrivaninha Mdf',
-  imgUrl: "assets/eletronicos/mesa.png",
-  price: 859.95,
-  unit: 'UN'
-
-);
+    description: 'Escrivaninha multiuso',
+    itemName: 'Escrivaninha Mdf',
+    imgUrl: "assets/eletronicos/mesa.png",
+    price: 859.95,
+    unit: 'UN');
 ItemModel placaMae = ItemModel(
   description: 'Placa mae ultima geração',
-  itemName:'placa mae',
+  itemName: 'placa mae',
   imgUrl: "assets/eletronicos/placa_mae.png",
   price: 855.60,
   unit: 'PC',
@@ -51,12 +50,26 @@ List<ItemModel> items = [
   escrivaninha,
   placaMae,
   mousePad,
-
 ];
- List<String> categories = [
-    'Eletronicos',
-    'Smartphones',
-    'Eletrodomésticos',
-    'Acessórios',
-    'Escritório',
-  ];
+List<String> categories = [
+  'Eletronicos',
+  'Smartphones',
+  'Eletrodomésticos',
+  'Acessórios',
+  'Escritório',
+];
+
+List<CartItemModel> cartItems = [
+  CartItemModel(
+    item: smartTv,
+    quantity: 1,
+  ),
+    CartItemModel(
+    item: smartphone,
+    quantity: 3,
+  ),
+    CartItemModel(
+    item: geladeira,
+    quantity: 2,
+  ),
+];
